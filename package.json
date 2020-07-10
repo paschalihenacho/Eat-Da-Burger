@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/paschalihenacho/Eat-Da-Burger#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "handlebar": "^1.0.0",
     "mysql2": "^2.1.0",
     "require": "^2.4.20"
   }

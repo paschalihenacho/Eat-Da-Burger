@@ -1,0 +1,35 @@
+
+nav {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 5px;
+}
+
+.x {
+opacity: 0%;
+}
+
+.x:hover {
+    opacity: 100%;
+}
+
+#make {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+@media screen and (max-width: 540px) {
+    #make {
+        background-color: #f7e04b;
+        padding: 13px;
+    }
+}
