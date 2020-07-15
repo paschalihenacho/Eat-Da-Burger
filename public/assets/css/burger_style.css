@@ -20,7 +20,9 @@ nav {
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
-
+.devour-btn:hover {
+    background-color: green;
+}
 .btn-outline-success {
     color: white !important;
     background-color: green;

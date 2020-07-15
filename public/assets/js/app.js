@@ -30,6 +30,21 @@ const app = {
                 }
             });
         });
+        $("#deleteBurger").on("click", function (e) {
+            e.preventDefault();
+            const data = {
+                name: $("#burgerName").val()
+            };
+            $.ajax({
+                type: "DELETE",
+                url: "api/burger",
+                data: data,
+                success: function (result) {
+                    console.log(result);
+                    window.location.reload();
+                }
+            });
+        });
     },
 
     init: function () {

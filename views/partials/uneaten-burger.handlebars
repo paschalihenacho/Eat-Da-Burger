@@ -9,12 +9,13 @@
                 <p>{{id}}.) {{burger_name}}
                     <button class="btn btn-sm btn-outline-danger m-1 devour-btn float-right"
                             data-burger="{{id}}">Devour<i class="fas fa-utensils ml-2"></i>
-
-
+                    </button>
+                    <button class="btn btn-sm btn-danger m-1 deleteBurger float-right"
+                            data-burger="{{id}}">Cancel<i class="fas fa-trash ml-2"></i>
                     </button>
                 </p>
             </div>
         {{/each }}
 
     </div>
-</div>
+</div> 
