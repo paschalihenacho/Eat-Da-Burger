@@ -1,9 +1,9 @@
-CREATE DATABASE burger_db;
+CREATE DATABASE eat_Da_burgers_db;
+USE eat_Da_burgers_db;
 
-USE burger_db;
-
-CREATE TABLE BURGERS (
-  id          INT PRIMARY KEY AUTO_INCREMENT,
-  burger_name VARCHAR(100) NOT NULL,
-  devoured    BOOLEAN      NOT NULL
+CREATE TABLE burgers (
+    id INT AUTO_INCREMENT NOT NULL,
+    burger_name VARCHAR(100),
+    devoured BOOLEAN,
+    PRIMARY KEY(id)
 );
