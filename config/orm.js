@@ -1,25 +1,40 @@
-const connection = require("../config/connection.js");
+const connection = require("./connection");
 
 const orm = {
-    selectAll: (tableName, cb) => {
-        const query = `SELECT * FROM ${tableName}`;
-        connection.query(query, (err, res) => {
-            if (err) throw err;
-            cb(res);
+    selectAll: function (tableName) {
+        const query = "SELECT * FROM ??";
+        return new Promise((resolve, reject) => {
+            connection.query(query, [tableName], (err, results) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(results);
+                }
+            });
         });
     },
-    insert: (tableName, newBurgerName, cb) => {
-        const query = `INSERT INTO ${tableName} (burger_name) VALUES ${newBurgerName}`;
-        connection.query(query, (err, res) => {
-            if (err) throw err;
-            cb(res);
+    insertOne: function (tableName, obj) {
+        const query = `INSERT INTO BURGERS SET ?`;
+        return new Promise((resolve, reject) => {
+            connection.query(query, obj, (err, results) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(results);
+                }
+            });
         });
     },
-    update: (tableName, burgerId, cb) => {
-        const query = `UPDATE ${tableName} SET devoured = true  WHERE id = ${burgerId}`;
-        connection.query(query, (err, res) => {
-            if (err) throw err;
-            cb(res);
+    updateOne: function (tableName, updCol, updVal, idCol, objId) {
+        const query = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+        return new Promise((resolve, reject) => {
+            connection.query(query, [tableName, updCol, updVal, idCol, objId], (err, results) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(results);
+                }
+            });
         });
     }
 };

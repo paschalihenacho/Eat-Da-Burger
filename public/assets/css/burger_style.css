@@ -1,0 +1,66 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 45px;
+    background-color: #ebc698;
+
+    
+}
+
+.title-img {
+    max-width: 600px;
+}
+nav {
+    background-color: #8FAADC;
+    background-image: url(background.png);
+    background-repeat: repeat;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.btn-outline-success {
+    color: white !important;
+    background-color: green;
+    border-color: #042f65 !important;
+}
+
+.form-control {
+    border-color: #042f65 !important;
+}
+
+.btn-order:hover {
+    background-color: green;
+    color: white !important;
+    font-weight: bolder;
+}
+
+input {
+    color: black !important;
+}
+
+.card-header {
+    background-color: #042f65;
+    color: white;
+}
+
+.card {
+    border-radius: 10px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    text-align: center;
+    width: 100%;
+    background-color: #8FAADC;
+    border-top: 5px solid #042f65;
+}
+
+footer small {
+    line-height: 40px;
+    color: #042f65;
+    font-size: 12px;
+}
