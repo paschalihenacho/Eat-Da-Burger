@@ -26,9 +26,13 @@ routes.get("/api/burger", (req, res) => {
 routes.post("/api/burger", (req, res) => {
     if (!req.body.name) {
         res.status(500).send({error: "Burger name is required"});
+        
     }
-    let newBurger = new Burger(req.body.name);
-    Burger.create(newBurger).then(id => {
+    //console.log(req.body)
+    const burger = {name: req.body.name,
+    devoured: false}
+    //let newBurger = new Burger(req.body.name);
+    Burger.create(burger).then(id => {
         res.json(id);
     }).catch((err) => {
         res.status(500).send({error: err});
