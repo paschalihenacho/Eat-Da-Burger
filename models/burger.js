@@ -17,7 +17,7 @@ Burger.selectBurgers = function () {
 
 Burger.create = function (burger) {
     return new Promise((resolve, reject) => {
-        orm.insertOne("burgers", {
+        orm.insertOne("burger", {
             burger_name: burger.name,
             devoured: burger.devoured
         }).then(results => {
@@ -31,7 +31,7 @@ Burger.create = function (burger) {
 
 Burger.updateDevoured = function (burgerId) {
     return new Promise((resolve, reject) => {
-        orm.updateOne("burgers", "devoured", true, "id", burgerId).then(results => {
+        orm.updateOne("burger", "devoured", true, "id", burgerId).then(results => {
             resolve(results);
         }).catch(() => {
             reject("Could not update burger");
