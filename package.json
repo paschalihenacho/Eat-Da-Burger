@@ -19,7 +19,7 @@
   "homepage": "https://github.com/maxrjohnson23/Eat-Da-Burger#readme",
   "dependencies": {
     "body-parser": "latest",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0"
